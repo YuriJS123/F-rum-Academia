@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Post Aberto</title>
   <!-- Link para seu CSS padrão (exemplo) -->
-  <link rel="stylesheet" href="../css/posts.css" />
+  <!-- <link rel="stylesheet" href="../css/posts.css" /> -->
   <style>
     /* CSS básico para o post aberto, similar ao preview */
 
@@ -169,11 +169,48 @@
 <body>
 
   <div class="post-container" id="post-container">
-    <!-- Conteúdo do post será inserido aqui via JS -->
+    <div class="post-header">
+      <!-- Avatar do autor -->
+      <img src="../img/Imagens-Blog-Lund-Trainers-768x512 (1).png" alt="avatar" class="avatar">
+      <div>
+        <p class="autor-nome">Nome do Autor</p>
+        <p class="post-data">24/06/2025</p>
+      </div>
+    </div>
+
+    <h1 class="titulo-post">Título do Post</h1>
+
+    <div class="post-conteudo">
+      Conteúdo do post exibido aqui com quebras de linha.
+    </div>
+
+    <div class="actions">
+      <button class="editar-btn" id="btn-editar">Editar</button>
+      <button class="excluir-btn" id="btn-excluir">Excluir</button>
+    </div>
+
+    <div class="comments-section">
+      <h3>Comentários</h3>
+
+      <div class="comments-list">
+        <div class="comment">
+          <img src="../img/Imagens-Blog-Lund-Trainers-768x512 (1).png" alt="foto" class="foto-comentario">
+          <div class="texto-comentario">
+            Comentário de exemplo com quebra de linha.<br>Nova linha.
+          </div>
+        </div>
+        <!-- Mais comentários aqui -->
+      </div>
+
+      <form class="comment-form">
+        <textarea placeholder="Escreva um comentário..." required></textarea>
+        <button type="submit">Enviar</button>
+      </form>
+    </div>
   </div>
 
   <!-- Modal de edição -->
-  <div id="modal-editar-post">
+  <div id="modal-editar-post" style="display: none;">
     <div class="modal-content">
       <button id="fechar-modal-editar" class="close-btn">&times;</button>
       <form id="formEditarPost">
